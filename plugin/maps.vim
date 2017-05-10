@@ -86,16 +86,16 @@ if ((maparg('W') == '') &&
         map  <F6>      :set buftype=""<CR>:w!<CR>
         imap <F6> <esc>:set buftype=""<CR>:w!<CR>
         vmap <F6> <esc>:set buftype=""<CR>:w!<CR>
-        map  \ :set buftype=""<CR>:w!<CR>
-        map <silent> ? :let g:session_autosave='no'<CR>:q!<CR>
+        " map  \ :set buftype=""<CR>:w!<CR>
+        " map <silent> ? :let g:session_autosave='no'<CR>:q!<CR>
 
-        map  <a-q>      :let g:session_autosave='no'<CR>:q!<CR>
-        imap <a-q> <esc>:let g:session_autosave='no'<CR>:q!<CR>
-        vmap <a-q> <esc>:let g:session_autosave='no'<CR>:q!<CR>
+        map  `q      :let g:session_autosave='no'<CR>:q!<CR>
+        imap `q <esc>:let g:session_autosave='no'<CR>:q!<CR>
+        vmap `q <esc>:let g:session_autosave='no'<CR>:q!<CR>
 
-        map  <a-w> :set buftype=""<CR>:w!<CR>
-        imap <a-w> <esc>:w!<CR>
-        vmap <a-w> <esc>:w!<CR>
+        map  `w :set buftype=""<CR>:w!<CR>
+        imap `w <esc>:w!<CR>
+        vmap `w <esc>:w!<CR>
 
         "map  W :set buftype=""<CR>:w!<CR>
         "vmap W <esc>:w!<CR>
