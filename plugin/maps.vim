@@ -61,8 +61,16 @@ map <leader>vq :VimuxCloseRunner<CR>
 
 map <silent><C-S-Left>  :new<CR>
 map <silent><C-S-Right> :tabnew<CR>
+
+map <PageUp>   :tabprevious<CR>
+map <PageDown> :tabNext<CR>
 map <silent>+ :call LoadTemplate(expand('%:e'))<cr>
-map <silent>¢ :call YMLTemplate(expand('%:e'))<cr>
+
+" Alt+5
+map <silent>¢ :call YMLTemplate(expand('%:e'))<cr>:vsp cheetah.yml<cr>
+" Alt+6
+map <silent>¬ :e cheetah.yml<cr>
+
 map <silent>- :Switch<cr>
 map <silent><F2> :NERDTreeToggle<CR>
 map <silent><F3> :TagbarToggle<CR>
@@ -83,19 +91,16 @@ if ((maparg('W') == '') &&
 \   (maparg('Q') == '')
 \)
         " shift + s salva direto, sem sair
-        map  <F6>      :set buftype=""<CR>:w!<CR>
-        imap <F6> <esc>:set buftype=""<CR>:w!<CR>
-        vmap <F6> <esc>:set buftype=""<CR>:w!<CR>
-        " map  \ :set buftype=""<CR>:w!<CR>
-        " map <silent> ? :let g:session_autosave='no'<CR>:q!<CR>
+        map  \ :set buftype=""<CR>:w!<CR>
+        map  ?       :let g:session_autosave='no'<CR>:q!<CR>
 
-        map  `q      :let g:session_autosave='no'<CR>:q!<CR>
-        imap `q <esc>:let g:session_autosave='no'<CR>:q!<CR>
-        vmap `q <esc>:let g:session_autosave='no'<CR>:q!<CR>
+        " map  `q      :let g:session_autosave='no'<CR>:q!<CR>
+        " imap `q <esc>:let g:session_autosave='no'<CR>:q!<CR>
+        " vmap `q <esc>:let g:session_autosave='no'<CR>:q!<CR>
 
-        map  `w :set buftype=""<CR>:w!<CR>
-        imap `w <esc>:w!<CR>
-        vmap `w <esc>:w!<CR>
+        " map  `w :set buftype=""<CR>:w!<CR>
+        " imap `w <esc>:w!<CR>
+        " vmap `w <esc>:w!<CR>
 
         "map  W :set buftype=""<CR>:w!<CR>
         "vmap W <esc>:w!<CR>
