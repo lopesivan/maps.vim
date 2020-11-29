@@ -25,17 +25,14 @@ set cpo&vim
 "
 " change file with `<leader>'
 "
-if( (maparg( '<leader>c1'  ) == '' ) &&
-\   (maparg( '<leader>c2'  ) == '' ) &&
-\   (maparg( '<leader>c3'  ) == '' ) &&
-\   (maparg( '<leader>c='  ) == '' ) &&
-\   (maparg( '<leader>o='  ) == '' ) &&
-\   (maparg( '<leader>h1'  ) == '' ) &&
-\   (maparg( '<leader>h2'  ) == '' ) &&
-\   (maparg( '<leader>vl'  ) == '' ) &&
-\   (maparg( '<leader>vi'  ) == '' ) &&
-\   (maparg( '<leader>vq'  ) == '' )
-\)
+" if( (maparg( '<leader>c1'  ) == '' ) &&
+" \   (maparg( '<leader>c2'  ) == '' ) &&
+" \   (maparg( '<leader>c3'  ) == '' ) &&
+" \   (maparg( '<leader>c='  ) == '' ) &&
+" \   (maparg( '<leader>o='  ) == '' ) &&
+" \   (maparg( '<leader>h1'  ) == '' ) &&
+" \   (maparg( '<leader>h2'  ) == '' )
+" \)
 
 
 "map <leader>p "+gP<CR>
@@ -44,47 +41,35 @@ if( (maparg( '<leader>c1'  ) == '' ) &&
 
 map <leader>c1 :%g/^\n\{2,\}/ d<CR>:%s/\s\+$//g<CR>
 map <leader>c2 :setlocal expandtab<CR>:retab<CR>
-map <leader>c3 :BufOnly<CR>
-map <leader>c= :s=\s*\([,;]\)\s*=\1 =g<CR>:let @/ = ""<CR>
-map <leader>o= :s=\s*\([*%=+-]\)\s*= \1 =g<CR>:let @/ = ""<CR>
-"map <leader>h1 yypVr=o
-"map <leader>h2 yypVr-o
+" map <leader>c3 :BufOnly<CR>
+" map <leader>c= :s=\s*\([,;]\)\s*=\1 =g<CR>:let @/ = ""<CR>
+" map <leader>o= :s=\s*\([*%=+-<>]\)\s*= \1 =g<CR>:let @/ = ""<CR>
 
-" Run command
-"call VimuxRunCommand("gcc -v")
-" Run last command executed by VimuxRunCommand
-map <leader>vl :VimuxRunLastCommand<CR>
-" Inspect runner pane map
-map <leader>vi :VimuxInspectRunner<CR>
-" Close vim tmux runner opened by VimuxRunCommand
-map <leader>vq :VimuxCloseRunner<CR>
+"map <leader>h1 yypVr-o
+"map <silent><F9> :exe "normal yypVr".input("entre com o char de sublinhar: ")."o"<CR>
 
 map <silent><C-S-Left>  :new<CR>
 map <silent><C-S-Right> :tabnew<CR>
 
 map <PageUp>   :tabprevious<CR>
 map <PageDown> :tabNext<CR>
-map <silent>+ :call LoadTemplate(expand('%:e'))<cr>
 
-" Alt+5
-map <silent>¢ :call YMLTemplate(expand('%:e'))<cr>:vsp cheetah.yml<cr>
-" Alt+6
-map <silent>¬ :e cheetah.yml<cr>
+"let g:switch_mapping='-'
+"map <silent>- :Switch<cr>
+"
+"map <silent><F2> :NERDTreeToggle<CR>
+"map <silent><F3> :TagbarToggle<CR>
+"map <silent><F12> :exe "normal ysiw".input("entre com o char: ")<CR>
 
-map <silent>- :Switch<cr>
-map <silent><F2> :NERDTreeToggle<CR>
-map <silent><F3> :TagbarToggle<CR>
-map <silent><F12> :exe "normal ysiw".input("entre com o char: ")<CR>
-map <silent><Leader>s :exe "normal cxiw"<CR>
+" SWAP de palavra
+map <silent>ç :exe "normal cxiw"<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+"xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+"nmap ga <Plug>(EasyAlign)
 vmap <Enter> <Plug>(EasyAlign)
 
-else
-        if ( !has("gui_running") || has("win32") )
-                echo "Error:[maps.vim] No Key mapped.\n".
-        endif
-endif
-"
 " W Q
 "
 if ((maparg('W') == '') &&
@@ -93,6 +78,7 @@ if ((maparg('W') == '') &&
         " shift + s salva direto, sem sair
         map  \ :set buftype=""<CR>:w!<CR>
         map  ?       :let g:session_autosave='no'<CR>:q!<CR>
+        map  <c-s>   :sall<CR>
 
         " map  `q      :let g:session_autosave='no'<CR>:q!<CR>
         " imap `q <esc>:let g:session_autosave='no'<CR>:q!<CR>
