@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/3f0ea94/
+<C-S-Left>	plugin/maps.vim	/^map <silent><C-S-Left>  :new<CR>$/;"	m
+<C-S-Right>	plugin/maps.vim	/^map <silent><C-S-Right> :tabnew<CR>$/;"	m
+<Enter>	plugin/maps.vim	/^vmap <Enter> <Plug>(EasyAlign)$/;"	m
+<PageDown>	plugin/maps.vim	/^map <PageDown> :tabNext<CR>$/;"	m
+<PageUp>	plugin/maps.vim	/^map <PageUp>   :tabprevious<CR>$/;"	m
+<a-F7>	plugin/motions.vim	/^nnoremap <silent> <a-F7>   :<C-u>call MoveScreenToUP()<CR>$/;"	m
+<a-F8>	plugin/motions.vim	/^nnoremap <silent> <a-F8>  :<C-u>call MoveScreenToDown()<CR>$/;"	m
+<c-Down>	plugin/motions.vim	/^nnoremap <silent> <c-Down>  :<C-u>call WLast()<CR>$/;"	m
+<c-Left>	plugin/motions.vim	/^nnoremap <silent> <c-Left>  :<C-u>call WNext()<CR>$/;"	m
+<c-Right>	plugin/motions.vim	/^nnoremap <silent> <c-Right> :<C-u>call Wnext()<CR>$/;"	m
+<c-UP>	plugin/motions.vim	/^nnoremap <silent> <c-UP>    :<C-u>call WFirst()<CR>$/;"	m
+<c-s>	plugin/maps.vim	/^        map  <c-s>   :sall<CR>$/;"	m
+<leader>c1	plugin/maps.vim	/^map <leader>c1 :%g\/^\\n\\{2,\\}\/ d<CR>:%s\/\\s\\+$\/\/g<CR>$/;"	m
+<leader>c2	plugin/maps.vim	/^map <leader>c2 :setlocal expandtab<CR>:retab<CR>$/;"	m
+<s-Down>	plugin/motions.vim	/^inoremap <silent> <s-Down> <C-o>:<C-u>call MoveLineDown()<CR>$/;"	m
+<s-Down>	plugin/motions.vim	/^nnoremap <silent> <s-Down>      :<C-u>call MoveLineDown()<CR>$/;"	m
+<s-Down>	plugin/motions.vim	/^vnoremap <silent> <s-Down>      :<C-u>call MoveVisualDown()<CR>$/;"	m
+<s-Left>	plugin/motions.vim	/^inoremap <silent> <s-Left>    <C-o>:<C-u>call MoveCharToLeft()<CR>$/;"	m
+<s-Left>	plugin/motions.vim	/^nnoremap <silent> <s-Left>         :<C-u>call MoveCharToLeft()<CR>$/;"	m
+<s-Right>	plugin/motions.vim	/^inoremap <silent> <s-Right>   <C-o>:<C-u>call MoveCharToRight()<CR>$/;"	m
+<s-Right>	plugin/motions.vim	/^nnoremap <silent> <s-Right>        :<C-u>call MoveCharToRight()<CR>$/;"	m
+<s-Up>	plugin/motions.vim	/^inoremap <silent> <s-Up>   <C-o>:<C-u>call MoveLineUp()<CR>$/;"	m
+<s-Up>	plugin/motions.vim	/^nnoremap <silent> <s-Up>        :<C-u>call MoveLineUp()<CR>$/;"	m
+<s-Up>	plugin/motions.vim	/^vnoremap <silent> <s-Up>        :<C-u>call MoveVisualUp()<CR>$/;"	m
+?	plugin/maps.vim	/^        map  ?       :let g:session_autosave='no'<CR>:q!<CR>$/;"	m
+Hidden	plugin/hide.vim	/^com  -bar Hidden :call s:Hidden()$/;"	c
+Hide	plugin/hide.vim	/^com  -bar -nargs=? -complete=custom,s:HideComplete Hide :call s:Hide(<q-args>)$/;"	c
+HideToggle	plugin/hide.vim	/^com  -bar -nargs=? -complete=custom,s:HideComplete HideToggle :call s:HideToggle(<q-args>)$/;"	c
+MoveCharToLeft	plugin/motions.vim	/^function MoveCharToLeft()$/;"	f
+MoveCharToLeftV	plugin/motions.vim	/^function MoveCharToLeftV()$/;"	f
+MoveCharToRight	plugin/motions.vim	/^function MoveCharToRight()$/;"	f
+MoveCharToRightV	plugin/motions.vim	/^function MoveCharToRightV()$/;"	f
+MoveLineDown	plugin/motions.vim	/^function! MoveLineDown()$/;"	f
+MoveLineOrVisualDown	plugin/motions.vim	/^function! MoveLineOrVisualDown(line_getter, range)$/;"	f
+MoveLineOrVisualUp	plugin/motions.vim	/^function! MoveLineOrVisualUp(line_getter, range)$/;"	f
+MoveLineOrVisualUpOrDown	plugin/motions.vim	/^function! MoveLineOrVisualUpOrDown(move_arg)$/;"	f
+MoveLineUp	plugin/motions.vim	/^function! MoveLineUp()$/;"	f
+MoveScreenToDown	plugin/motions.vim	/^function MoveScreenToDown()$/;"	f
+MoveScreenToUP	plugin/motions.vim	/^function MoveScreenToUP()$/;"	f
+MoveVisualDown	plugin/motions.vim	/^function! MoveVisualDown()$/;"	f
+MoveVisualUp	plugin/motions.vim	/^function! MoveVisualUp()$/;"	f
+Q	plugin/maps.vim	/^        nn Q :normal n.<CR>$/;"	m
+Q	plugin/maps.vim	/^        nn Q @='n.'<CR>$/;"	m
+Q	plugin/maps.vim	/^        nn Q n.$/;"	m
+Scratch	plugin/scratch.vim	/^command! -nargs=0 Scratch call s:ScratchBufferOpen(0)$/;"	c
+ScratchBufferName	plugin/scratch.vim	/^let ScratchBufferName = "__Scratch__"$/;"	v
+Sscratch	plugin/scratch.vim	/^command! -nargs=0 Sscratch call s:ScratchBufferOpen(1)$/;"	c
+Unhide	plugin/hide.vim	/^com  -bar -bang -nargs=? -complete=custom,s:HideComplete Unhide :call s:Unhide(<q-args>,<bang>0)$/;"	c
+WFirst	plugin/motions.vim	/^function WFirst()$/;"	f
+WLast	plugin/motions.vim	/^function WLast()$/;"	f
+WNext	plugin/motions.vim	/^function WNext()$/;"	f
+Wnext	plugin/motions.vim	/^function Wnext()$/;"	f
+\\	plugin/maps.vim	/^        map  \\ :set buftype=""<CR>:w!<CR>$/;"	m
+g:loaded_hide	plugin/hide.vim	/^let g:loaded_hide = "v01"$/;"	v
+g:loaded_maps	plugin/maps.vim	/^let g:loaded_maps = "v01"$/;"	v
+g:loaded_motion	plugin/motions.vim	/^let g:loaded_motion = "v01"$/;"	v
+loaded_scratch	plugin/scratch.vim	/^let loaded_scratch=1$/;"	v
+maps.vim	README.md	/^# maps.vim$/;"	c
+project_opened	plugin/.ropeproject/config.py	/^def project_opened(project):$/;"	f
+s:CompareHLGroups	plugin/hide.vim	/^function s:CompareHLGroups( k1, k2)$/;"	f
+s:GetArgument	plugin/hide.vim	/^function s:GetArgument( arg )$/;"	f
+s:GetHLGroups	plugin/hide.vim	/^function s:GetHLGroups()$/;"	f
+s:Hidden	plugin/hide.vim	/^function s:Hidden()$/;"	f
+s:Hide	plugin/hide.vim	/^function s:Hide( hlgroup )$/;"	f
+s:HideComplete	plugin/hide.vim	/^function s:HideComplete(a,cmdline,c)$/;"	f
+s:HideToggle	plugin/hide.vim	/^function s:HideToggle( hlgroup )$/;"	f
+s:ScratchBufferOpen	plugin/scratch.vim	/^function! s:ScratchBufferOpen(new_win)$/;"	f
+s:ScratchMarkBuffer	plugin/scratch.vim	/^function! s:ScratchMarkBuffer()$/;"	f
+s:Unhide	plugin/hide.vim	/^function s:Unhide( hlgroup, ...)$/;"	f
+s:UnhideAll	plugin/hide.vim	/^function s:UnhideAll()$/;"	f
+s:hidden	plugin/hide.vim	/^	let s:hidden = {}$/;"	v
+s:keepcpo	plugin/hide.vim	/^let s:keepcpo     = &cpo$/;"	v
+s:keepcpo	plugin/maps.vim	/^let s:keepcpo  = &cpo$/;"	v
+s:keepcpo	plugin/motions.vim	/^let s:keepcpo     = &cpo$/;"	v
+set_prefs	plugin/.ropeproject/config.py	/^def set_prefs(prefs):$/;"	f
+ç	plugin/maps.vim	/^map <silent>ç :exe "normal cxiw"<CR>$/;"	m
