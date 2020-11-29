@@ -254,15 +254,15 @@ vnoremap <silent> <s-Up>        :<C-u>call MoveVisualUp()<CR>
 vnoremap <silent> <s-Down>      :<C-u>call MoveVisualDown()<CR>
 
 " A pair of maps for swapping a word to-the-left and to-the-right:
-nnoremap <unique> <silent> `h "_yiw?\w\+\_W\+\%#<CR>:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>:silent! /Wuff  ----  Wuff!!<CR><c-o><c-l>
-nnoremap <unique> <silent> `l "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR>:silent! /Wuff  ----  Wuff!!<CR><c-l>
-" map <C-F7> `h
-" map <C-F8> `l
+"nnoremap <unique> <silent> `h "_yiw?\w\+\_W\+\%#<CR>:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR>:silent! /Wuff  ----  Wuff!!<CR><c-o><c-l>
+"nnoremap <unique> <silent> `l "_yiw:s/\(\%#\w\+\)\(\_W\+\)\(\w\+\)/\3\2\1/<CR><c-o>/\w\+\_W\+<CR>:silent! /Wuff  ----  Wuff!!<CR><c-l>
+"map <C-F7> `h
+"map <C-F8> `l
 "map <a-Right> `l
 "map <a-Left>  `h
 
-"nnoremap <silent> <a-Up>    :<C-u>call MoveScreenToUP()<CR>
-"nnoremap <silent> <a-Down>  :<C-u>call MoveScreenToDown()<CR>
+nnoremap <silent> <a-F7>   :<C-u>call MoveScreenToUP()<CR>
+nnoremap <silent> <a-F8>  :<C-u>call MoveScreenToDown()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
